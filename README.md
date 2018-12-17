@@ -1,1 +1,1 @@
-# smothie
+# smoothie
