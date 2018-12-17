@@ -15,17 +15,6 @@ $req=$bdd->prepare("
 $req->execute(["idRecette"=>$id]);
 $recette=$req->fetch();
 
-?>
+echo json_encode($recette);
 
-<h2>Recette<?= $recette["recipeName"]; ?></h2>
-    <!-- <h3><?= $recette["sous-titre"]; ?></h3> -->
-        <article>
-            <p><?= $recette["recipeSummary"]; ?></p>
-            <p><?= $recette["recipeDescription"]; ?></p>
-        </article>
-        <aside>
-            <?= $recette["time"];
-                $recette["difficulty"];
-                //$recette["ingredients"]; 
-            ?>
-        </aside>
+?>
