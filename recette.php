@@ -1,19 +1,31 @@
 <?php
 include "bdd.php";
 
-$id = $_GET['idRecette'];
+//$id = $_GET['idRecette'];
+$id=1;
 
 $req=$bdd->prepare("
     SELECT
         *
     FROM
-        article
+        recipe
     WHERE 
-        id=:idRecette
+        idRecipe=:idRecette
 ");
 $req->execute(["idRecette"=>$id]);
-$contenuArticle=$req->fetch();
+$recette=$req->fetch();
 
-$page="recette";
-include "layout.phtml";
 ?>
+
+<h2>Recette<?= $recette["recipeName"]; ?></h2>
+    <!-- <h3><?= $recette["sous-titre"]; ?></h3> -->
+        <article>
+            <p><?= $recette["recipeSummary"]; ?></p>
+            <p><?= $recette["recipeDescription"]; ?></p>
+        </article>
+        <aside>
+            <?= $recette["time"];
+                $recette["difficulty"];
+                //$recette["ingredients"]; 
+            ?>
+        </aside>
