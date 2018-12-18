@@ -30,8 +30,25 @@ function showProducts(){
                 var nom="<h3>"+data[i].recipeName+"<h3>";
                 var image="<img src='"+data[i].photo+"'>";
                 var description="<p>"+data[i].recipeSummary+"</p>";
-                console.log("nom");
                 $("#products").append("<li>"+nom+description+image+"</li>");
+            }  
+        }
+    });
+}
+function showAllRecipes(){
+    $.ajax({
+        url: 'recettes.php',
+        method:'post',
+        dataType:'json',
+        contentType: false,
+        processData: false,
+        success: function(data){
+            for (var i=0; i<data.length; i++){
+                var nom="<h3>"+data[i].recipeName+"<h3>";
+                var image="<img src='"+data[i].photo+"'>";
+                var description="<p>"+data[i].recipeSummary+"</p>";
+                console.log("nom");
+                $("#allRecipes").append("<li>"+nom+description+image+"</li>");
             }  
         }
     });
@@ -43,5 +60,8 @@ $(document).ready(function(){
     }
     if(window.location.href.indexOf("produits.html")){
         showProducts();
+    }
+    if(window.location.href.indexOf("recettes.html")){
+        showAllRecipes();
     }
 });
