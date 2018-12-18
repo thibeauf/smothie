@@ -1,29 +1,21 @@
-
-
 <?php
+include "bdd.php";
 
-    include "bdd.php";
+$email=$_POST["email"];
+$mdp=$_POST["mdp"];
 
-    var_dump($_POST);
+$result=false;
 
-	$email = $_POST["email"];
-    $mdp = $_POST["mdp"];
-    
-    
-    if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
-        $req = $bdd->prepare("SELECT * FROM user WHERE email = ? AND password = ?");
-        $req->execute([$email, $mdp]);
-        $user = $req->fetch();
-    
-        $result = false;
+$req = $bdd->prepare("
+    SELECT id 
+    FROM user 
+    WHERE email=:email 
+    AND password=:password
+");
+$req->execute(["email"=>$email,"password"=>$mdp]);
+$verif=$req->fetch();
 
-        if($user['email'] == $email && $user['password'] == $mdp){
-            $result = true;
-      
-         }
-         else{
-             $result = false;
-    }
-    echo json_encode(["result" => $result]);
+if(!empty($verif)){
+    $result=true;    
 }    
-?>
+echo json_encode(["result" => $result]);
