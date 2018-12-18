@@ -61,7 +61,11 @@ $(document).ready(function(){
     if(window.location.href.indexOf("produits.html")){
         showProducts();
     }
+<<<<<<< HEAD
     if(window.location.href.indexOf("recettes.html")){
         showAllRecipes();
     }
 });
+=======
+});
+>>>>>>> 9e02cffdec88b8fd36cdd5b9e5713a8a295baeef
