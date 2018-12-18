@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!-- Librairie jQuery -->
-    <!-- Librairie perso -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Librairie perso -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -26,49 +27,44 @@
         </nav>
     </header>
     <main>
-
-
-
-    <form class="formulaireDeConnexion">
-        <ul>
-            <li>
-                <label for="email" class="sr-only">Adresse email</label>
-                <input type="text" id="email" class="form-control" placeholder="Email address" name="email">
-            </li>
-            <li>
-                <label for="mdp" class="sr-only">Mot de passe</label>
-                <input type="text" id="mdp" class="form-control" placeholder="mdp" name="mdp">
-            </li>
-            
-            <li>
-                <button id="userConnexion" type="submit">Connexion</button>
-            </li>
-            
-        </ul>
-    </form>
+        <form class="formulaireDeConnexion" method="POST" action="connexion.php">
+            <ul>
+                <li>
+                    <label for="email" class="sr-only">Adresse email</label>
+                    <input type="text" id="email" class="form-control" placeholder="Email address" name="email">
+                </li>
+                <li>
+                    <label for="mdp" class="sr-only">Mot de passe</label>
+                    <input type="text" id="mdp" class="form-control" placeholder="mdp" name="mdp">
+                </li>                
+                <li>
+                    <button id="userConnexion" type="submit">Connexion</button>
+                </li>
+                
+            </ul>
+        </form>
 
     <div id="login"></div>
 
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+        </ul>
+        <nav>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="produits.php">Produits</a></li>
+            <li><a href="recettes.php">Recettes</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </nav>
+        <small>
+            2019 ©LeMeilleurGroupeDeLaClasse
+        </small>
+    </footer>
 
-</main>
-<footer>
-    <ul>
-        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-    </ul>
-    <nav>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="produits.php">Produits</a></li>
-        <li><a href="recettes.php">Recettes</a></li>
-        <li><a href="contact.php">Contact</a></li>
-    </nav>
-    <small>
-        2019 ©LeMeilleurGroupeDeLaClasse
-    </small>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="connexion.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
