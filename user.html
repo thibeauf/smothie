@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
 <!-- 	<link rel="stylesheet" href="css/normalize.css"> -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 <!-- bootstrap -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
@@ -32,7 +34,7 @@
         </nav>
         <section id="pseudoAvatar">
             <div class="pseudoAvatar">
-                <h1>@Pseudo-User</h1>
+                <h1 id="pseudoUser">@Pseudo-User</h1>
                 <img id="avatar" src="images/3smooth.jpg" width="300" height="300" />
             </div>
         </section>
@@ -44,34 +46,28 @@
 		<article class="panelUser row">
 			<div id="informations" class="col-5">
                 <h2 class="titleinfo">Informations</h2>
-                    <!-- <?php foreach($user as $value) { ?> -->
                     <h3 class="info" style="display:inline">Nom</h3>
-                        <!-- <p><?= $value['lastname']?></p> -->
+                    <input type="text" id="lastname" name="lastname" value="">
                     <h3 class="info">Prénom</h3>
-                        <!-- <p><?= $value['firstname']?></p> -->
-                    <h3 class="info">Anniversaire</h3>
-                        <!-- <p><?= $value['titre']?></p> -->
+                        <input type="text" id="firstname" name="firstname" value="">
                     <h3 class="info">Adresse</h3>
-                        <!-- <p><?= $value['address']?></p> -->
+                        <input type="text" id="address" name="firstname" value="">
                     <h3 class="info">Code Postal</h3>
-                        <!-- <p><?= $value['zip']?></p> -->
+                    <input type="text" id="zip" name="zip" value="">
                     <h3 class="info">Ville</h3>
-                        <!-- <p><?= $value['city']?></p> -->
+                    <input type="text" id="city" name="city" value="">
                     <h3 class="info">Email</h3>
-                        <p>Bestotodu38@gmail.com</p>
+                    <input type="text" id="emailPageUser" name="" value="">
+
                     <h3 class="info">Date d'inscription</h3>
-                        <p>15/10/2017</p>
-                    <!-- <?php } ?>  -->
+                    <input type="text" id="dateInscription" name="dateInscription" value="">
+
                 <small>
                     <a href="">Modifier mes informations</a>
                 </small>
 			</div>
 			<div id="favorites" class="col-5">
                 <h2 class="row">Mes recettes favorites :</h2>
-                <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
-                <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
-                <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
-                <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
                 <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
                 <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
                 <img id="" src="images/smoothie2.jpg" class="rounded-circle" width="140" height="140"/>
@@ -91,9 +87,9 @@
 
 <nav>
 			<a class="expand" href="index.html">Home</a>
-			<a class="expand" href="#">Produits</a>
-			<a class="expand" href="#">Recettes</a>
-			<a class="expand" href="#">Contact</a>
+			<a class="expand" href="produits.html">Produits</a>
+			<a class="expand" href="recettes.html">Recettes</a>
+			<a class="expand" href="contact.html">Contact</a>
 </nav>
 <p>2019 ©LeMeilleurGroupeDeLaClasse</p>
 	</small>
