@@ -1,0 +1,11 @@
+img{
+    border: 2px solid black;
+   
+}
+.roundedImage{
+    overflow:hidden;
+    border-radius:120px;
+    width:200px;
+    height:200px;
+    float: left;
+}
