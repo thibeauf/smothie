@@ -430,9 +430,9 @@ justify-content: center;
 	background-color: #fbc6c0;
 }
 
-
 #coeur
 {
+	margin-bottom:10%;
 	width: 30px;
 	height: auto;
 	 order: 0;
@@ -464,6 +464,7 @@ animation: beat .25s infinite alternate;
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
+		padding:0 !important;
     }
 
 .description{
@@ -481,12 +482,33 @@ animation: beat .25s infinite alternate;
     align-self: auto;
     }
 
-.description p
+.description p, .smoothieRecette p
 {
 	width: 60%;
+	margin-bottom: 5%;
 }
 
+.pageRecette
+{
+	margin: 6% 0 0 0;
+		text-align: center;
+}
 .pageRecette h3 {
 	color:#fbc6c0;
 	font-size: 2em;
+}
+
+
+.img-thumbnail {
+    padding: 1.25rem;
+    background-color: #fbe8c0;
+    border: none;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+ul
+{
+	padding:0!important;
 }
