@@ -101,11 +101,16 @@ function showInfo(){
             var address=data.address;
             var zip=data.zip;
             var city=data.city;
+            var email=data.email;
+            var date_inscription=data.date_inscription;
+            console.log(email);
             $("#lastname").val(lastname);
             $("#firstname").val(firstname);
             $("#address").val(address);
             $("#zip").val(zip);
             $("#city").val(city);
+            $("#emailPageUser").val(email);
+            $("#dateInscription").val(date_inscription);
         }
     });
 }
@@ -152,4 +157,7 @@ $(document).ready(function(){
         showInfo();
     }
     $(".formulaireDinscription").on("submit", inscription)
+    if(window.location.href.indexOf("user.html")){
+        showInfo();
+    }
 });
