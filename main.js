@@ -59,6 +59,7 @@ function connexion(e){
     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     e.preventDefault();
+    console.log("ok");  
 
     if(email.trim().length > 0 && regex.test(email) == true){
         $.ajax({
@@ -67,7 +68,7 @@ function connexion(e){
             dataType: 'json',
             data: {email: email, mdp: mdp},
             success: function(data){
-                if(data.result == true){                
+                if(data.result == true){            
                     $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert">Connexion réussie !</div>');
                 } else {
                     $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>'); 

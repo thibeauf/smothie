@@ -22,6 +22,15 @@ $hashPassword = hashPassword($mdp);
 
     if($user['email'] == $email && verifyPassword($hashPassword, $user['password'])==true){
         $result=true;
+        // $_SESSION['user'] =
+        // [
+        //     'UserId'    => $user['id'],
+        //     'FirstName' => $user['firstName'],
+        //     'LastName'  => $user['lastName'],
+        //     'Email'     => $user['email']
+        // ];
+
+        session_start();
     }
     else{
         $result = false;
