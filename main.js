@@ -59,7 +59,6 @@ function connexion(e){
     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     e.preventDefault();
-    console.log("ok");  
 
     if(email.trim().length > 0 && regex.test(email) == true){
         $.ajax({
@@ -68,8 +67,8 @@ function connexion(e){
             dataType: 'json',
             data: {email: email, mdp: mdp},
             success: function(data){
-                if(data.result == true){            
-                    $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert">Connexion réussie !</div>');
+                if(data.result == true){      
+                    $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Connexion réussie !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edit_profil.html">Mon profil</a></div></div>');
                 } else {
                     $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>'); 
                 }
@@ -131,7 +130,7 @@ function inscription(e){
                     $('#h1Connection').html('<div><div>');
                     $('#h1Inscription').html('<div><div>');
                     $('.formulaireDeConnexion').html('<div><div>');
-                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><p>Nous sommes grâçe à toi '+ +' Fruits enregistré ;-)</p><hr><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edite_profile.phtml">Mon profil</a></div></div>');
+                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edite_profile.phtml">Mon profil</a></div></div>');
             }
         }
     })
