@@ -47,7 +47,6 @@ function showAllRecipes(){
                 var nom="<h3>"+data[i].recipeName+"<h3>";
                 var image="<img src='"+data[i].photo+"'>";
                 var description="<p>"+data[i].recipeSummary+"</p>";
-                console.log("nom");
                 $("#allRecipes").append("<li>"+nom+description+image+"</li>");
             }  
         }
@@ -91,6 +90,26 @@ function logOut(){
     });
 }
 
+function showInfo(){
+    $.ajax({
+        url: 'show_profil.php',
+        method: 'post',
+        dataType: 'json',
+        success: function(data){
+            var lastname=data.lastname;
+            var firstname=data.firstname;
+            var address=data.address;
+            var zip=data.zip;
+            var city=data.city;
+            $("#lastname").val(lastname);
+            $("#firstname").val(firstname);
+            $("#address").val(address);
+            $("#zip").val(zip);
+            $("#city").val(city);
+        }
+    });
+}
+
 $(document).ready(function(){
     if(window.location.href.indexOf("recette.html")){
         showRecipe();
@@ -103,4 +122,7 @@ $(document).ready(function(){
     }
     $(".formulaireDeConnexion").on("submit", connexion);
     $("#logout").on("click", logOut);
+    if(window.location.href.indexOf("edit_profil.html")){
+        showInfo();
+    }
 });
