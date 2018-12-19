@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /* ----------------------------------------------------------------------------------------------------
 Super Form Reset
 ----------------------------------------------------------------------------------------------------*/
@@ -158,7 +156,6 @@ select[multiple]
 }
 
 
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 /*/*GLOBAL */
 
 * {
@@ -171,12 +168,8 @@ html {
 	background-color: white;
 }
 
-<<<<<<< HEAD
-.accueil{
-=======
 header
 {
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 	background:url(images/banner.jpg) no-repeat;
 	background-size: cover;
 }
@@ -194,7 +187,6 @@ body {
 	color:  #595959;
 }
 
-<<<<<<< HEAD
 #avatar{
 	border: 12px solid #FFDEA2;
 	
@@ -238,8 +230,6 @@ main #article1
 	margin-top: 2.5em;
 }
 
-h2 {
-=======
 #fond
 {
 	background-color: #f4f4f2;
@@ -276,14 +266,9 @@ h3 {
 	font-size:5.5rem;
 	padding-bottom: 15px;
 }
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 
-	color:#ff729a;
-	font-size:5.5rem;
-	padding-bottom: 15px;
-}
 
-<<<<<<< HEAD
+
 h3 {
 	text-align:center;
 	color:white;
@@ -350,7 +335,6 @@ row{
 	max-width:7%;
 	height:auto;
 }
-=======
 .smooth {
 	position: relative;
 	top:10px;
@@ -381,33 +365,22 @@ row{
 	height:auto;
 }
 
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 #logo2
 {
 	margin: 5em 2em;
 	max-width:30%;
 	height:auto;
-<<<<<<< HEAD
 }
 .connect{
 	font-size: 200%;
 }
 
-=======
-}
-
-
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 nav
 {
 	padding-top: 2em;
 }
-/* #navPageUser{
+/* #navPageUser{*/
 
-<<<<<<< HEAD
-} */
-=======
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 nav a {
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
@@ -435,7 +408,6 @@ nav a i
 	 text-decoration: none;
 	 color:#ffa89f;
  }
-<<<<<<< HEAD
 
  .expand{
    position:relative;
@@ -490,25 +462,7 @@ footer p
 {
 	background-color:#f9aec3;
 } */
-=======
 
- .expand{
-   position:relative;
-   text-decoration:none;
-   display:inline-block;
- }
- .expand:after {
-   display:block;
-   content: '';
-   border-bottom: solid 3px #fbe8c0;
-   transform: scaleX(0);
-   transition: transform 250ms ease-in-out;
-   transform-origin:100% 50%
- }
- .expand:hover:after {
-   transform: scaleX(1);
-   transform-origin:0 50%;
- }
 
 
 /* .rectangle-jaune
@@ -727,4 +681,3 @@ ul
 	padding:1%;
 	border : 1px solid  #ff729a;
 }
->>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
