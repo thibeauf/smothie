@@ -1,3 +1,164 @@
+<<<<<<< HEAD
+=======
+/* ----------------------------------------------------------------------------------------------------
+Super Form Reset
+----------------------------------------------------------------------------------------------------*/
+
+input,
+label,
+select,
+button,
+textarea
+{
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+
+	/* Browsers have different default form fonts */
+	font-size:13px;
+	font-family:Arial;
+}
+
+/* Remove the stupid outer glow in Webkit */
+input:focus
+{
+	outline:0;
+}
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea
+{
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select
+{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week]
+{
+}
+
+/* Button Controls
+-----------------------------------------------*/
+
+input[type=checkbox],
+input[type=radio]
+{
+	width:13px;
+	height:13px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+
+input[type=file]
+{
+
+}
+
+/* Search Input
+-----------------------------------------------*/
+
+/* Make webkit render the search input like a normal text field */
+input[type=search]
+{
+	-webkit-appearance:textfield;
+	-webkit-box-sizing:content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration
+{
+	display:none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]
+{
+	/* Fix IE7 display bug */
+	overflow:visible;
+	width:auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button
+{
+	padding:0;
+	border:0;
+	background:none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+
+textarea
+{
+	/* Move the label to the top */
+	vertical-align:top;
+
+	/* Turn off scroll bars in IE unless needed */
+	overflow:auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+
+select
+{
+
+}
+
+select[multiple]
+{
+	/* Move the label to the top */
+	vertical-align:top;
+}
+
+
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 /*/*GLOBAL */
 
 * {
@@ -10,7 +171,12 @@ html {
 	background-color: white;
 }
 
+<<<<<<< HEAD
 .accueil{
+=======
+header
+{
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 	background:url(images/banner.jpg) no-repeat;
 	background-size: cover;
 }
@@ -28,6 +194,7 @@ body {
 	color:  #595959;
 }
 
+<<<<<<< HEAD
 #avatar{
 	border: 12px solid #FFDEA2;
 	
@@ -72,12 +239,51 @@ main #article1
 }
 
 h2 {
+=======
+#fond
+{
+	background-color: #f4f4f2;
+	padding:0 !important;
+}
+
+#demi-main
+{
+	padding: 0 50px 0 50px;
+}
+
+h1, h2, h3 {
+	font-family: 'Amatic SC', cursive;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #f62459;
+}
+
+main #article1
+{
+	margin-top: 2.5em;
+}
+
+h1, h2 {
 
 	color:#ff729a;
 	font-size:5.5rem;
 	padding-bottom: 15px;
 }
 
+h3 {
+	text-align:center;
+	color:white;
+	font-size:5.5rem;
+	padding-bottom: 15px;
+}
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
+
+	color:#ff729a;
+	font-size:5.5rem;
+	padding-bottom: 15px;
+}
+
+<<<<<<< HEAD
 h3 {
 	text-align:center;
 	color:white;
@@ -144,23 +350,64 @@ row{
 	max-width:7%;
 	height:auto;
 }
+=======
+.smooth {
+	position: relative;
+	top:10px;
+	max-width: 90%;
+	height: auto;
+}
+
+#concept
+{
+	margin-top: 0.5em;
+	max-width: 97%;
+}
+
+#le-concept p
+{
+	text-align: justify;
+}
+
+#smoothies
+{
+	margin-top:2em;
+}
+
+#logo
+{
+	margin: 5em 0 5em 3em;
+	max-width:30%;
+	height:auto;
+}
+
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 #logo2
 {
 	margin: 5em 2em;
 	max-width:30%;
 	height:auto;
+<<<<<<< HEAD
 }
 .connect{
 	font-size: 200%;
 }
 
+=======
+}
+
+
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 nav
 {
 	padding-top: 2em;
 }
 /* #navPageUser{
 
+<<<<<<< HEAD
 } */
+=======
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd
 nav a {
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
@@ -188,6 +435,7 @@ nav a i
 	 text-decoration: none;
 	 color:#ffa89f;
  }
+<<<<<<< HEAD
 
  .expand{
    position:relative;
@@ -242,3 +490,222 @@ footer p
 {
 	background-color:#f9aec3;
 } */
+=======
+
+ .expand{
+   position:relative;
+   text-decoration:none;
+   display:inline-block;
+ }
+ .expand:after {
+   display:block;
+   content: '';
+   border-bottom: solid 3px #fbe8c0;
+   transform: scaleX(0);
+   transition: transform 250ms ease-in-out;
+   transform-origin:100% 50%
+ }
+ .expand:hover:after {
+   transform: scaleX(1);
+   transform-origin:0 50%;
+ }
+
+
+/* .rectangle-jaune
+{
+	border-left: solid 30px #fbe8c0;
+	border-top: solid 30px #fbe8c0;
+} */
+
+footer {
+		text-align: center;
+}
+
+footer p
+{
+	margin-top: 30px;
+	font-size: 1.3em;
+}
+.reseau
+{
+	height: 150px;
+}
+
+.reseau a img
+{
+	width: 50px;
+	height: 50px;
+}
+
+ul li
+{
+	list-style: none;
+}
+
+/*
+=================================================================
+========================formulaire================================
+*/
+
+input, textarea {
+	background-color: white;
+    padding: 1.5rem 1.5rem 1.5rem 5rem;
+    margin: 1%;
+    color: #666;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+}
+
+button {
+	border-radius: 50px;
+	border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+}
+button {
+    overflow: visible;
+    width: auto;
+		margin:10px 0;
+	}
+
+fieldset legend
+{
+	font-size:1.4em;
+}
+
+#formulaire
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 26em;
+}
+
+
+
+#formulaire #h1inscription,#formulaire  #h1Connection
+{
+	margin-top: 15%;
+	text-align: center;
+}
+
+.formulaireDeConnexion
+{
+display: flex;
+justify-content: center;
+}
+
+.formulaireDinscription ul
+{
+
+	display: flex;
+	justify-content: center;
+}
+
+
+.formulaireDinscription ul li
+{
+	margin:10px;
+}
+
+@media screen and (max-width: 1024px) {
+.formulaireDinscription ul
+{
+	flex-wrap:wrap;
+}
+}
+/*
+=================================================================
+========================autre===============================
+*/
+.block
+{
+	min-width: 100%;
+	height: 60px;
+	background-color: #fbc6c0;
+}
+
+#coeur
+{
+	margin-bottom:10%;
+	width: 30px;
+	height: auto;
+	 order: 0;
+	 flex: 0 1 auto;
+	 align-self: auto;
+}
+#coeur:hover {
+	width: 35px;
+	height: auto;
+animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/*battement de coeur animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+.smoothieRecette {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+		align-items: center;
+    }
+
+.smoothieRecette * {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+		padding:0 !important;
+    }
+
+.description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+		align-items: center;
+    }
+
+.description{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.description p, .smoothieRecette p
+{
+	width: 60%;
+	margin-bottom: 5%;
+}
+
+.pageRecette
+{
+	margin: 6% 0 0 0;
+		text-align: center;
+}
+.pageRecette h3 {
+	color:#fbc6c0;
+	font-size: 2em;
+}
+
+
+.img-thumbnail {
+    padding: 1.25rem;
+    background-color: #fbe8c0;
+    border: none;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+ul
+{
+	padding:0!important;
+}
+>>>>>>> 6084fb01a259e5b2c9ebc13c4932ebc32bd047fd

@@ -1,74 +1,148 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Smooth'Maker</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <!-- Librairie jQuery -->
-    <!-- Librairie perso -->
-
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>SmoothMaker</title>
+	<!-- Appel CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
+<!-- 	<link rel="stylesheet" href="css/normalize.css"> -->
+<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul id="nav">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="produits.php">Produits</a></li>
-                <li><a href="recettes.php">Recettes</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
-            <ul>
-                <li><a href="connexion.php"><i class="far fa-user-circle"></i></a></li>
-            </ul>
+	<!--HEADER-->
+<div class="container" id="fond">
+	<header>
+
+
+		<nav>
+			<a class="expand" href="index.html">Home</a>
+      <a class="expand" href="produits.html">Produits</a>
+      <a class="expand" href="recettes.html">Recettes</a>
+			<a class="expand" href="contact.html">Contact</a>
+			<a class="expand"  href="login.html"><i class="far fa-user-circle"></i></a>
         </nav>
-    </header>
-    <main>
 
 
+		<img id="logo" src="images/logo-degrade.png"/>
+	</header>
+	<!--MAIN CONTENT-->
+
+	<main>
+
+<section id="formulaire" class="container">
+    <h1 id="h1Connection">Se connecter</h1>
 
     <form class="formulaireDeConnexion">
         <ul>
             <li>
-                <label for="email" class="sr-only">Adresse email</label>
-                <input type="text" id="email" class="form-control" placeholder="Email address" name="email">
+							<span class="input">
+                <label for="email">Adresse email : </label>
+                <input type="text" id="email" placeholder="  toto@mail.com" name="email">
+							</span>
             </li>
             <li>
-                <label for="mdp" class="sr-only">Mot de passe</label>
-                <input type="text" id="mdp" class="form-control" placeholder="mdp" name="mdp">
+							<span class="input">
+                <label for="mdp">Mot de passe : </label>
+                <input type="password" id="mdp" placeholder="********" name="mdp">
+							</span>
             </li>
-            
+
             <li>
-                <button id="userConnexion" type="submit">Connexion</button>
+                <button id="userConnexion" type="submit">Valider</button>
             </li>
-            
+
         </ul>
     </form>
 
-    <div id="login"></div>
+    <hr>
+<<<<<<< HEAD
+    <h1 id="h1Inscription">S'inscrire</h1>
+=======
+    <h1 id="h1inscription">S'inscrire</h1>
+>>>>>>> dc79d47e8b4168c944c33422536c159db5f7a0b3
+    <form class="formulaireDinscription">
+        <fieldset>
+            <legend>Vos Informations</legend>
+            <ul>
+                <li>
+                    <label for="lastName">Nom : </label>
+                    <input type="text" id="lastName" name="lastName">
+                </li>
+                <li>
+                    <label for="firstName">Prenom : </label>
+                    <input type="text" id="firstName" name="firstName">
+                </li>
+                <li>
+                    <label for="emailInscription">Adresse email : </label>
+                    <input type="text" id="emailInscription" placeholder="toto@mail.com" name="emailInscription">
+                </li>
 
+            </ul>
+        </fieldset>
+        <fieldset>
+                <legend>Vos coordonnées</legend>
+                <ul>
+									<li>
+										<label for="address">Adresse : </label>
+										<input type="text" id="address" placeholder="1 rue de la République" name="address">
+									</li>
+									<li>
+										<label for="zip">Code Postal : </label>
+										<input type="text" id="zip" placeholder="69001" name="zip">
+									</li>
+									<li>
+										<label for="city">Ville : </label>
+										<input type="text" id="city" placeholder="Lyon" name="city">
+									</li>
+                </ul>
+        </fieldset>
+        <fieldset>
+                <legend>Sécurité</legend>
+                    <ul>
+                        <li>
+                            <label for="mdpInscription">Mot de passe</label>
+                            <input type="password" id="mdpInscription" placeholder="********" name="mdpInscription">
+                        </li>
+                    </ul>
+       </fieldset>
+       <ul>
+            <li>
+                <button id="userInscription" type="submit">Valider</button>
+            </li>
+        </ul>
 
+    </form>
+
+</section>
+
+<aside class="block">
+
+</aside>
 </main>
 <footer>
-    <ul>
-        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-    </ul>
-    <nav>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="produits.php">Produits</a></li>
-        <li><a href="recettes.php">Recettes</a></li>
-        <li><a href="contact.php">Contact</a></li>
-    </nav>
-    <small>
-        2019 ©LeMeilleurGroupeDeLaClasse
-    </small>
-</footer>
+	<small id="licence">
+		<div class="reseau">
+			<a href="#"><img id="logo2" src="images/instagram.svg"/></a>
+			<a href="#"><img id="logo2" src="images/twitter.svg"/></a>
+			<a href="#"><img id="logo2" src="images/facebook.svg"/></a>
+		</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="connexion.js"></script>
+<nav>
+			<a class="expand" href="index.html">Home</a>
+			<a class="expand" href="#">Produits</a>
+			<a class="expand" href="#">Recettes</a>
+			<a class="expand" href="#">Contact</a>
+</nav>
+<p>2019 ©LeMeilleurGroupeDeLaClasse</p>
+	</small>
+</footer>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="main.js"></script>
+    <script src="inscription.js"></script>
 </body>
 </html>

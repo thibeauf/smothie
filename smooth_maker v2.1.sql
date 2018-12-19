@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 18 Décembre 2018 à 09:54
+-- Généré le :  Mar 18 Décembre 2018 à 11:24
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.32-0ubuntu0.16.04.1
 
@@ -57,7 +57,7 @@ CREATE TABLE `recipe` (
   `idRecipe` int(11) NOT NULL,
   `recipeName` varchar(100) NOT NULL,
   `recipeSummary` varchar(100) NOT NULL,
-  `recipeDescription` varchar(500) NOT NULL,
+  `recipeDescription` varchar(500) DEFAULT NULL,
   `time` varchar(50) NOT NULL,
   `difficulty` varchar(50) NOT NULL,
   `photo` varchar(50) NOT NULL,
@@ -74,10 +74,10 @@ INSERT INTO `recipe` (`idRecipe`, `recipeName`, `recipeSummary`, `recipeDescript
 (3, 'Légumes d\'été', 'Smoothie de légumes glacés', '2 tomates coeur de boeuf préalablement pelées\r\n\r\n2 carottes\r\n\r\n1 branche de céleri\r\n\r\nCitron jaune\r\n\r\nCitron vert\r\n\r\nSel de céleri (selon le goût)\r\n\r\n1 cuillère à café de sauce worcestershire\r\n\r\n10 glaçons', '10 minutes', 'Très facile', 'images/smoothie3.jpg', 'Hiver'),
 (4, 'Casanova', 'Cocktail de fruits au citron vert', '10 cl de lait de coco\r\n\r\n20 cl de jus de fruit multivitaminé\r\n\r\n1 cuillère à café de jus de citron vert\r\n\r\nGlaçons\r\n\r\n1 rondelle de citron vert (pour la déco)', '5 minutes', 'Très facile', 'images/smoothie4.jpg', 'Ete'),
 (5, 'Bonne mine', 'Smoothie au lait de coco et poudre de baobab', '200 g de fraises + 2 bananes + 2 pommes + des fruits secs - amandes /noisettes + des lamelles de gingembre mariné* + des raisins secs + 2 càs de Baies de Goji\r\n4 feuilles de menthe fraîche\r\n1 càs de  poudre de Baobab bio Baomix\r\npour le sucre j\'ai rajouté du sirop de gingembre bio\r\n20 cl de lait de coco bio', '3 minutes', 'Très facile', 'images/smoothie5.jpg', 'Hiver'),
-(7, 'Ananas Mangue', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus egestas mi, non commodo', '', '', '', '', 'Ete'),
-(8, 'Ananas Mangue Pomme', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus egestas mi, non commodo', '', '', '', '', 'Hiver'),
-(9, 'Bowl Fraises Banane', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus egestas mi, non commodo', '', '', '', '', 'Hiver'),
-(10, 'Banane Miel', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus egestas mi, non commodo', '', '', '', '', 'Ete');
+(11, 'Ananas Mangue', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, '', '', '', 'Ete'),
+(12, 'Ananas Mangue Pomme', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, '', '', '', 'Hiver'),
+(13, 'Bowl Fraises Banane', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, '', '', '', 'Hiver'),
+(14, 'Banane Miel', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, '', '', '', 'Ete');
 
 -- --------------------------------------------------------
 
@@ -171,7 +171,7 @@ ALTER TABLE `favorite`
 -- AUTO_INCREMENT pour la table `recipe`
 --
 ALTER TABLE `recipe`
-  MODIFY `idRecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idRecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
