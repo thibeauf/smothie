@@ -198,7 +198,7 @@ body {
 	padding: 0 50px 0 50px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: 'Amatic SC', cursive;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -464,7 +464,7 @@ animation: beat .25s infinite alternate;
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
-		padding:0 !important;
+		padding:0;
     }
 
 .description{
@@ -485,7 +485,12 @@ animation: beat .25s infinite alternate;
 .description p, .smoothieRecette p
 {
 	width: 60%;
-	margin-bottom: 5%;
+	margin-bottom: 3%;
+}
+
+.smoothieRecette p
+{
+	margin-top:3%;
 }
 
 .pageRecette
@@ -499,6 +504,11 @@ animation: beat .25s infinite alternate;
 }
 
 
+ul
+{
+	padding:0!important;
+}
+
 .img-thumbnail {
     padding: 1.25rem;
     background-color: #fbe8c0;
@@ -508,7 +518,16 @@ animation: beat .25s infinite alternate;
     height: auto;
 }
 
-ul
+.pageRecette h4
 {
-	padding:0!important;
+	color: #ff729a;
+  font-size: 2em;
+
+}
+
+.fav
+{
+	margin: 5% 0;
+	padding:1%;
+	border : 1px solid  #ff729a;
 }
