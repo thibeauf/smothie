@@ -430,8 +430,63 @@ justify-content: center;
 	background-color: #fbc6c0;
 }
 
+
 #coeur
 {
-	width: 25px;
+	width: 30px;
 	height: auto;
+	 order: 0;
+	 flex: 0 1 auto;
+	 align-self: auto;
+}
+#coeur:hover {
+	width: 35px;
+	height: auto;
+animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/*battement de coeur animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+.smoothieRecette {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+		align-items: center;
+    }
+
+.smoothieRecette * {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+		align-items: center;
+    }
+
+.description{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.description p
+{
+	width: 60%;
+}
+
+.pageRecette h3 {
+	color:#fbc6c0;
+	font-size: 2em;
 }
