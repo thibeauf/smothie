@@ -33,8 +33,8 @@
 
 	<main>
 
-<section class="container">
-    <h1>Se connecter</h1>
+<section id="formulaire" class="container">
+    <h1 id="h1Connection">Se connecter</h1>
 
     <form class="formulaireDeConnexion">
         <ul>
@@ -47,7 +47,7 @@
             <li>
 							<span class="input">
                 <label for="mdp">Mot de passe : </label>
-                <input type="text" id="mdp" placeholder="********" name="mdp">
+                <input type="password" id="mdp" placeholder="********" name="mdp">
 							</span>
             </li>
 
@@ -59,7 +59,7 @@
     </form>
 
     <hr>
-    <h1>S'inscrire</h1>
+    <h1 id="h1inscription">S'inscrire</h1>
     <form class="formulaireDinscription">
         <fieldset>
             <legend>Vos Informations</legend>
@@ -82,14 +82,18 @@
         <fieldset>
                 <legend>Vos coordonnées</legend>
                 <ul>
-                    <li>
-                        <label for="address">Adresse : </label>
-                        <input type="text" id="address" placeholder="1 rue de la République" name="address"></li>
-                        <li>  <label for="zip">Code Postal : </label>
-                        <input type="text" id="zip" placeholder="69001" name="zip"></li>
-                        <li>  <label for="city">Ville : </label>
-                        <input type="text" id="city" placeholder="Lyon" name="city">
-                    </li>
+									<li>
+										<label for="address">Adresse : </label>
+										<input type="text" id="address" placeholder="1 rue de la République" name="address">
+									</li>
+									<li>
+										<label for="zip">Code Postal : </label>
+										<input type="text" id="zip" placeholder="69001" name="zip">
+									</li>
+									<li>
+										<label for="city">Ville : </label>
+										<input type="text" id="city" placeholder="Lyon" name="city">
+									</li>
                 </ul>
         </fieldset>
         <fieldset>
@@ -97,7 +101,7 @@
                     <ul>
                         <li>
                             <label for="mdpInscription">Mot de passe</label>
-                            <input type="text" id="mdpInscription" placeholder="********" name="mdpInscription">
+                            <input type="password" id="mdpInscription" placeholder="********" name="mdpInscription">
                         </li>
                     </ul>
        </fieldset>
@@ -108,7 +112,12 @@
         </ul>
 
     </form>
+
 </section>
+
+<aside class="block">
+
+</aside>
 </main>
 <footer>
 	<small id="licence">
