@@ -429,3 +429,9 @@ justify-content: center;
 	height: 60px;
 	background-color: #fbc6c0;
 }
+
+#coeur
+{
+	width: 25px;
+	height: auto;
+}

@@ -1,10 +1,15 @@
 <?php
 include "bdd.php";
+include "crypt.php";
+
+
 
 $email=$_POST["email"];
 $mdp=$_POST["mdp"];
+$hashPassword = hashPassword($mdp);
 
-if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
+
+//if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
 
     $req = $bdd->prepare("
         SELECT * 
@@ -12,10 +17,10 @@ if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
         WHERE email=:email 
         AND password=:password
     ");
-    $req->execute(["email"=>$email,"password"=>$mdp]);
+    $req->execute(["email"=>$email,"password"=>$hashPassword]);
     $user=$req->fetch();
 
-    if($user['email'] == $email && $user['password'] == $mdp){
+    if($user['email'] == $email && verifyPassword($hashPassword, $user['password'])==true){
         $result=true;
         // $userSession = new UserSession();
         // $userSession->create
@@ -29,5 +34,5 @@ if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
     else{
         $result = false;
     }
-}
+//}
 echo json_encode(["result" => $result]);
