@@ -17,15 +17,14 @@ if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
 
     if($user['email'] == $email && $user['password'] == $mdp){
         $result=true;
-        // $_SESSION['user'] =
-        // [
-        //     'UserId'    => $user['id'],
-        //     'FirstName' => $user['firstName'],
-        //     'LastName'  => $user['lastName'],
-        //     'Email'     => $user['email']
-        // ];
-
-        session_start();
+        // $userSession = new UserSession();
+        // $userSession->create
+        // (
+        //     $user['id'],
+        //     $user['firstname'],
+        //     $user['lastname'],
+        //     $user['email']
+        // );
     }
     else{
         $result = false;
