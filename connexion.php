@@ -8,7 +8,7 @@ $result=false;
 
 $req = $bdd->prepare("
     SELECT id 
-    FROM user 
+    FROM user
     WHERE email=:email 
     AND password=:password
 ");
@@ -16,6 +16,7 @@ $req->execute(["email"=>$email,"password"=>$mdp]);
 $verif=$req->fetch();
 
 if(!empty($verif)){
-    $result=true;    
+    $result=true;
+    session_start();  
 }    
 echo json_encode(["result" => $result]);

@@ -57,18 +57,36 @@ function showAllRecipes(){
 function connexion(e){
     var email=$('#email').val();
     var mdp=$('#mdp').val();
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     e.preventDefault();
-    $.ajax({
-        url: 'connexion.php',
-        method: 'post',
-        dataType: 'json',
-        data: {email: email, mdp: mdp},
-        success: function(data){
-            if(data.result == true){                
-                $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert">Connexion réussie !</div>');
-            } else {
-                $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>'); 
+
+    if(email.trim().length > 0 && regex.test(email) == true){
+        $.ajax({
+            url: 'connexion.php',
+            method: 'post',
+            dataType: 'json',
+            data: {email: email, mdp: mdp},
+            success: function(data){
+                if(data.result == true){                
+                    $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert">Connexion réussie !</div>');
+                } else {
+                    $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>'); 
+                }
             }
+        });
+    }
+    else{
+        $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Format incorrect</div>'); 
+    }
+}
+
+function logOut(){
+    $.ajax({
+        url: 'logout.php',
+        method: 'post',
+        success: function(){
+            window.location.href=index.html;
         }
     });
 }
@@ -83,5 +101,6 @@ $(document).ready(function(){
     if(window.location.href.indexOf("recettes.html")){
         showAllRecipes();
     }
-    $(".formulaireDeConnexion").on("submit", connexion)
+    $(".formulaireDeConnexion").on("submit", connexion);
+    $("#logout").on("click", logOut);
 });
