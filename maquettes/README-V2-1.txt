@@ -13,7 +13,7 @@ Nav + Icone profil  : #ffa89f
 Titre ("le concept", "nos produits") : #ff657a
 Texte corps (Lorem ipsum) + Nom produits : #595959
 Rectangle jaune : #fbe8c0
-Rectangle Corail : fbc6c0
+Rectangle Corail : #fbc6c0
 Rectangle rose : #f9aec3
 Copyright : #ff729a
 
