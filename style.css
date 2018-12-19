@@ -189,8 +189,8 @@ body {
 
 #avatar{
 	border: 12px solid #FFDEA2;
-	
-	
+
+
 }
 
 #pseudoAvatar{
@@ -224,7 +224,7 @@ h1{
 	font-size: 5rem;
 	font-weight: bold;
 	color: white;
-} 
+}
 main #article1
 {
 	margin-top: 2.5em;
@@ -454,22 +454,6 @@ footer p
 	height: 50px;
 }
 
-/* .rectangle-corail img
-{
-	background-color:#fbc6c0;
-}
-.rectangle-rouge img
-{
-	background-color:#f9aec3;
-} */
-
-
-
-/* .rectangle-jaune
-{
-	border-left: solid 30px #fbe8c0;
-	border-top: solid 30px #fbe8c0;
-} */
 
 footer {
 		text-align: center;
@@ -501,7 +485,7 @@ ul li
 ========================formulaire================================
 */
 
-input, textarea {
+#formulaire input, #formulaire textarea {
 	background-color: white;
     padding: 1.5rem 1.5rem 1.5rem 5rem;
     margin: 1%;
