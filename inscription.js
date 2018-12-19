@@ -22,7 +22,7 @@ function inscription(e){
                     $('#h1Connection').html('<div><div>');
                     $('#h1Inscription').html('<div><div>');
                     $('.formulaireDeConnexion').html('<div><div>');
-                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><p>Nous sommes grâçe à toi '+ +' Fruits enregistré ;-)</p><hr><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edite_profile.phtml">Mon profil</a></div></div>');
+                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><p>Grâçe à toi nous sommes '+2+' Fruits enregistré ;-)</p><hr><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edite_profile.phtml">Mon profil</a></div></div>');
             }
         }
     })
