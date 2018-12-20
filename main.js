@@ -147,6 +147,10 @@ function showProductsIndex(){
         }
     })
 }
+function sendMessage(){
+   $("#contact").html('<div class="alert alert-success" role="alert"><br><br><h3 class="alert-heading">Message envoyé !</h3><br></div>');
+};
+
 $(document).ready(function(){
     if(window.location.href.indexOf("recette.html") > 0){
         var idRecette = location.search.substring(location.search.indexOf("=")+1);
@@ -171,4 +175,6 @@ $(document).ready(function(){
     if(window.location.href.indexOf("user.html") > 0){
         showProductsIndex();
     }
+    $(".formulaire").on("submit", sendMessage);
 });
+
