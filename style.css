@@ -662,6 +662,7 @@ ul
 
 #allRecipes
 {
+	margin-bottom: 5%;
 display: flex;
 flex-wrap: wrap;
 }
@@ -681,7 +682,10 @@ flex-wrap: wrap;
 
 #recette
 {
+	background-color: white;
 	margin:5% 0;
+	border: 12px solid #FFDEA2;
+	padding: 5%;
 }
 
 #allRecipes li a
