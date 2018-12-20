@@ -140,6 +140,9 @@ function inscription(e){
         }
     })
 }
+function sendMessage(){
+   $("#contact").html('<div class="alert alert-success" role="alert"><br><br><h3 class="alert-heading">Message envoyé !</h3><br></div>');
+}
 
 $(document).ready(function(){
     if(window.location.href.indexOf("recette.html")){
@@ -160,4 +163,5 @@ $(document).ready(function(){
     if(window.location.href.indexOf("user.html")){
         showInfo();
     }
+    $(".formulaire").on("submit", sendMessage);
 });
