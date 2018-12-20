@@ -7,13 +7,13 @@ function showRecipe(){
         contentType: false,
         processData: false,
         success: function(data){
-            var nom="<h2>"+data.recipeName+"<h2>";
-            var description="<h3>"+data.recipeSummary+"</h3>";
-            var image="<img src='"+data.photo+"'>";
-            var temps="Temps :"+data.time+".";
-            var niveau=data.difficulty;
-            var recipeDetails="<p>"+data.recipeDescription+"</p>";
-            $("#recette").append(nom+description+image+recipeDetails+temps+niveau);
+            $("#recipeName").append(data.recipeName);
+            $("#recipeSummary").append(data.recipeSummary);
+            $("#timeRecipe").append(data.time);
+            $("#ingredientsRecipe").append(data.recipeDescription);
+            $("#difficultyRecipe").append(data.difficulty);
+            $("#descriptionRecipe").append(data.preparation);
+            $("#imageRecipe").attr("src",data.photo);
         }
     });   
 }
@@ -103,7 +103,6 @@ function showInfo(){
             var city=data.city;
             var email=data.email;
             var date_inscription=data.date_inscription;
-            console.log(email);
             $("#lastname").val(lastname);
             $("#firstname").val(firstname);
             $("#address").val(address);
@@ -135,7 +134,26 @@ function inscription(e){
                     $('#h1Connection').html('<div><div>');
                     $('#h1Inscription').html('<div><div>');
                     $('.formulaireDeConnexion').html('<div><div>');
-                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edite_profile.phtml">Mon profil</a></div></div>');
+                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
+            }
+        }
+    })
+}
+
+function showProductsIndex(){
+    $.ajax({
+        url: 'produitsIndex.php',
+        method: 'post',
+        dataType: 'json',
+        data: {
+
+            },
+        success: function(data){
+            if (data.reponse == true) {
+                    $('#h1Connection').html('<div><div>');
+                    $('#h1Inscription').html('<div><div>');
+                    $('.formulaireDeConnexion').html('<div><div>');
+                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
             }
         }
     })
@@ -159,5 +177,8 @@ $(document).ready(function(){
     $(".formulaireDinscription").on("submit", inscription)
     if(window.location.href.indexOf("user.html")){
         showInfo();
+    }
+    if(window.location.href.indexOf("user.html")){
+        showProductsIndex();
     }
 });

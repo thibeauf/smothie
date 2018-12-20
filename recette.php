@@ -16,5 +16,3 @@ $req->execute(["idRecette"=>$id]);
 $recette=$req->fetch();
 
 echo json_encode($recette);
-
-?>
