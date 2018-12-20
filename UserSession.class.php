@@ -28,7 +28,7 @@
         }
 
         public function getFullName() {
-            return $_SESSION["user"]["firstName"]." ".$_SESSION["user"]["lastName"];
+            return $_SESSION["user"]["firstname"]." ".$_SESSION["user"]["lastname"];
         }
 
         public function getUserId(){
