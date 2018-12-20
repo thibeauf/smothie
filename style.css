@@ -286,6 +286,15 @@ h3 {
 	margin-top: 150px;
 	justify-content: center;
 }
+.panelUser a
+{
+	color: #ffa89f;
+}
+.panelUser a:hover
+{
+	color: #ff729a;
+}
+
 /* .panelUser div{
 	margin: 0 60px;
 }  */
