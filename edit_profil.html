@@ -34,10 +34,10 @@
 
     <main>
 
-<form class="editForm" action="edit_profil.php" method="POST">
-        <h2><i class="fas fa-pen"></i>   Editer le profil</h2>
+				<form class=" row justify-content-center editForm" action="edit_profil.php" method="POST">
+
             <fieldset>
-                <legend><i class="far fa-file"></i> Données personnelles</legend>
+                <legend><h2>Données personnelles</h2></legend>
                 <ul>
                     <li>
                         <label for="lastName">Nom :</label>
@@ -45,14 +45,14 @@
                     </li>
                     <li>
                         <label class="textarea" for="firstname">Prénom :</label>
-                        <input type="text" id="firstname" name="firstname" value">
+                        <input type="text" id="firstname" name="firstname" value="">
                     </li>
                     <li>
                         <label for="address">Adresse :</label>
                         <input type="text" id="address" name="address" value="">
                     </li>
                     <li>
-                        <label class="textarea" for="zip">Code Postal :</label>
+                        <label class="textarea" for="zip">CP :</label>
                         <input type="text" id="zip" name="zip" value="">
                     </li>
                     <li>
@@ -66,6 +66,7 @@
                 </ul>
             </fieldset>
         </form>
+								<aside class="block"></aside>
     </main>
 	<footer>
 	<small id="licence">
