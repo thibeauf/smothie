@@ -14,9 +14,8 @@ function showRecipe(idRecette){
             $("#descriptionRecipe").append(data.preparation);
             $("#imageRecipe").attr("src",data.photo);
         }
-    });   
+    });
 }
-
 function showProducts(){
     $.ajax({
         url: 'produits.php',
@@ -46,18 +45,15 @@ function showAllRecipes(){
                 var nom="<figcaption>"+data[i].recipeName+"</figcaption>";
                 var image="<img src='"+data[i].photo+"' class='rounded-circle'>";
                 $("#allRecipes").append("<li><figure>"+image+nom+"<a href='recette.html?idRecette="+data[i].idRecipe+"'>Celle ci !</a></figure></li>");
-            }  
+            }
         }
     });
 }
-
 function connexion(e){
     var email=$('#email').val();
     var mdp=$('#mdp').val();
     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
     e.preventDefault();
-
     if(email.trim().length > 0 && regex.test(email) == true){
         $.ajax({
             url: 'connexion.php',
@@ -65,19 +61,18 @@ function connexion(e){
             dataType: 'json',
             data: {email: email, mdp: mdp},
             success: function(data){
-                if(data.result == true){      
+                if(data.result == true){
                     $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Connexion réussie !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edit_profil.html">Mon profil</a></div></div>');
                 } else {
-                    $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>'); 
+                    $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>');
                 }
             }
         });
     }
     else{
-        $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Format incorrect</div>'); 
+        $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Format incorrect</div>');
     }
 }
-
 function logOut(){
     $.ajax({
         url: 'logout.php',
@@ -87,7 +82,6 @@ function logOut(){
         }
     });
 }
-
 function showInfo(){
     $.ajax({
         url: 'show_profil.php',
@@ -111,7 +105,6 @@ function showInfo(){
         }
     });
 }
-
 function inscription(e){
     e.preventDefault();
     $.ajax({
@@ -121,7 +114,7 @@ function inscription(e){
         data: {
             email: $("#emailInscription").val(),
             mdp: $("#mdpInscription").val(),
-            address: $("#address").val(),          
+            address: $("#address").val(),
             zip: $("#zip").val(),
             city: $("#city").val(),
             lastName: $("#lastName").val(),
@@ -137,14 +130,12 @@ function inscription(e){
         }
     })
 }
-
 function showProductsIndex(){
     $.ajax({
         url: 'produitsIndex.php',
         method: 'post',
         dataType: 'json',
         data: {
-
             },
         success: function(data){
             if (data.reponse == true) {
@@ -156,16 +147,13 @@ function showProductsIndex(){
         }
     })
 }
-
 $(document).ready(function(){
     if(window.location.href.indexOf("recette.html")){
-
         var idRecette = location.search.substring(location.search.indexOf("=")+1);
-
         showRecipe(idRecette);
     }
     if(window.location.href.indexOf("produits.html")){
-        
+
         showProducts();
     }
     if(window.location.href.indexOf("recettes.html")){
