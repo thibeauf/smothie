@@ -1,9 +1,9 @@
 <?php
 include "bdd.php";
 
-session_id();
-
-$id = 1;
+if(isAuthenticated()){
+    session_start ();
+    $id=getUserId();
 
     $lastname=$_POST["lastname"];
     $firstname=$_POST["firstname"];
@@ -27,3 +27,4 @@ $id = 1;
 
     header("location:index.html");
     exit();
+}

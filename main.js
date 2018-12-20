@@ -152,25 +152,29 @@ function sendMessage(){
 };
 
 $(document).ready(function(){
-    if(window.location.href.indexOf("recette.html")){
+    if(window.location.href.indexOf("recette.html") > 0){
         var idRecette = location.search.substring(location.search.indexOf("=")+1);
         showRecipe(idRecette);
     }
-    if(window.location.href.indexOf("produits.html")){
+    if(window.location.href.indexOf("produits.html") > 0){
 
         showProducts();
     }
-    if(window.location.href.indexOf("recettes.html")){
+    if(window.location.href.indexOf("recettes.html") > 0){
         showAllRecipes();
     }
     $(".formulaireDeConnexion").on("submit", connexion);
     $("#logout").on("click", logOut);
-    if(window.location.href.indexOf("edit_profil.html")){
+    if(window.location.href.indexOf("edit_profil.html") > 0){
         showInfo();
     }
     $(".formulaireDinscription").on("submit", inscription)
-    if(window.location.href.indexOf("user.html")){
+    if(window.location.href.indexOf("user.html") > 0){
         showInfo();
+    }
+    if(window.location.href.indexOf("user.html") > 0){
+        showProductsIndex();
     }
     $(".formulaire").on("submit", sendMessage);
 });
+

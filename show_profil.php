@@ -1,7 +1,8 @@
 <?php
 include "bdd.php";
-
-$id = 1;
+include "UserSession.class.php";
+$userSession = new UserSession();
+$id = $userSession->getUserId();
 $infoUser = $bdd->prepare("
     SELECT 
         *
