@@ -187,6 +187,20 @@ body {
 	color:  #595959;
 }
 
+#avatar{
+	border: 12px solid #FFDEA2;
+
+
+}
+
+#pseudoAvatar{
+	background:url(images/framboise.jpg);
+	background-size: cover;
+	text-align: center;
+}
+.pseudoAvatar{
+	position: relative; top: 100px;
+}
 #fond
 {
 	background-color: #f4f4f2;
@@ -198,7 +212,36 @@ body {
 	padding: 0 50px 0 50px;
 }
 
-h1, h2, h3 {
+h2, h3 {
+	font-family: 'Amatic SC', cursive;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #f62459;
+}
+h1{
+	font-family: 'Amatic SC', cursive;
+	text-transform: uppercase;
+	font-size: 5rem;
+	font-weight: bold;
+	color: white;
+}
+main #article1
+{
+	margin-top: 2.5em;
+}
+
+#fond
+{
+	background-color: #f4f4f2;
+	padding:0 !important;
+}
+
+#demi-main
+{
+	padding: 0 50px 0 50px;
+}
+
+h1, h2, h3, h4 {
 	font-family: 'Amatic SC', cursive;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -225,6 +268,73 @@ h3 {
 }
 
 
+
+h3 {
+	text-align:center;
+	color:white;
+	font-size:5.5rem;
+	padding-bottom: 15px;
+}
+
+.info{
+	color:#ffa89f;
+	text-align: left;
+}
+#informations p{
+	text-align: right;
+}
+#informations{
+	border: 10px solid #F9DBD7;
+}
+row{
+	text-align: center;
+}
+.titleinfo{
+	text-align: center;
+}
+.panelUser{
+	margin: 150px 50px 0 50px;
+}
+.panelUser div{
+	margin: 0 60px;
+}
+.rounded-circle{
+	margin: 20px;
+}
+.smooth {
+	position: relative;
+	top:10px;
+	max-width: 90%;
+	height: auto;
+}
+
+#concept
+{
+	margin-top: 0.5em;
+	max-width: 97%;
+}
+
+#le-concept p
+{
+	text-align: justify;
+}
+
+#smoothies
+{
+	margin-top:2em;
+}
+
+#logo
+{
+	margin: 5em 0 5em 3em;
+	max-width:30%;
+	height:auto;
+}
+#logoPageUser{
+	margin: -15px 0 15px 3em;
+	max-width:7%;
+	height:auto;
+}
 .smooth {
 	position: relative;
 	top:10px;
@@ -261,12 +371,15 @@ h3 {
 	max-width:30%;
 	height:auto;
 }
-
+.connect{
+	font-size: 200%;
+}
 
 nav
 {
 	padding-top: 2em;
 }
+/* #navPageUser{*/
 
 nav a {
 	font-family: 'Open Sans', sans-serif;
@@ -315,11 +428,26 @@ nav a i
  }
 
 
-/* .rectangle-jaune
+footer {
+		text-align: center;
+}
+
+footer p
 {
-	border-left: solid 30px #fbe8c0;
-	border-top: solid 30px #fbe8c0;
-} */
+	margin-top: 30px;
+	font-size: 1.3em;
+}
+.reseau
+{
+	height: 150px;
+}
+
+.reseau a img
+{
+	width: 50px;
+	height: 50px;
+}
+
 
 footer {
 		text-align: center;
@@ -351,7 +479,7 @@ ul li
 ========================formulaire================================
 */
 
-input, textarea {
+#formulaire input, #formulaire textarea {
 	background-color: white;
     padding: 1.5rem 1.5rem 1.5rem 5rem;
     margin: 1%;
@@ -432,6 +560,102 @@ justify-content: center;
 
 #coeur
 {
-	width: 25px;
+	margin-bottom:10%;
+	width: 30px;
 	height: auto;
+	 order: 0;
+	 flex: 0 1 auto;
+	 align-self: auto;
+}
+#coeur:hover {
+	width: 35px;
+	height: auto;
+animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/*battement de coeur animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+.smoothieRecette {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+		align-items: center;
+    }
+
+.smoothieRecette * {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+		padding:0;
+    }
+
+.description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+		align-items: center;
+    }
+
+.description{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.description p, .smoothieRecette p
+{
+	width: 60%;
+	margin-bottom: 3%;
+}
+
+.smoothieRecette p
+{
+	margin-top:3%;
+}
+
+.pageRecette
+{
+	margin: 6% 0 0 0;
+		text-align: center;
+}
+.pageRecette h3 {
+	color:#fbc6c0;
+	font-size: 2em;
+}
+
+
+ul
+{
+	padding:0!important;
+}
+
+.img-thumbnail {
+    padding: 1.25rem;
+    background-color: #fbe8c0;
+    border: none;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.pageRecette h4
+{
+	color: #ff729a;
+  font-size: 2em;
+
+}
+
+.fav
+{
+	margin: 5% 0;
+	padding:1%;
+	border : 1px solid  #ff729a;
 }

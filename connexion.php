@@ -1,13 +1,10 @@
 <?php
 include "bdd.php";
-include "crypt.php";
-
-
+//include "crypt.php";
 
 $email=$_POST["email"];
 $mdp=$_POST["mdp"];
 //$hashPassword = hashPassword($mdp);
-
 
 //if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
 
@@ -18,27 +15,23 @@ $mdp=$_POST["mdp"];
         AND password=:password
     ");
     $req->execute(["email"=>$email,"password"=>$mdp]);
-    //$req->execute(["email"=>$email,"password"=>$hashPassword]);
     $user=$req->fetch();
 
-    if($user['email'] == $email && $user['password'] == $mdp){
-
-    //if($user['email'] == $email && verifyPassword($hashPassword, $user['password'])==true){
+    if($user['email'] == $email ){
         $result=true;
-        // $_SESSION['user'] =
-        // [
-        //     'UserId'    => $user['id'],
-        //     'FirstName' => $user['firstName'],
-        //     'LastName'  => $user['lastName'],
-        //     'Email'     => $user['email']
-        // ];
-
-        session_start();
-
-        
+        // $userSession = new UserSession();
+        // $userSession->create
+        // (
+        //     $user['id'],
+        //     $user['firstname'],
+        //     $user['lastname'],
+        //     $user['email']
+        // );
     }
     else{
         $result = false;
     }
 //}
 echo json_encode(["result" => $result]);
+
+//&& verifyPassword($hashPassword, $user['password'])==true

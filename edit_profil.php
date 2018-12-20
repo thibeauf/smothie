@@ -1,6 +1,8 @@
 <?php
 include "bdd.php";
 
+session_id();
+
 $id = 1;
 
     $lastname=$_POST["lastname"];
