@@ -5,7 +5,7 @@ function hashPassword($mdpInsciption) {
     return crypt($mdpInsciption, $salt);
 }
 
-
-
-
-?>
+function verifyPassword($password, $hashedPassword)
+	{
+		return crypt($password, $hashedPassword) == $hashedPassword;
+	}
