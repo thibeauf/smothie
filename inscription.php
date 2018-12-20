@@ -28,9 +28,6 @@ if(!empty($_POST)){
         VALUES (?,?,?,?,?,?,?)
     ");
 
-
-//     $user = $req->execute([$emailInscription, $hashPassword, $address, $zip, $city, $lastName, $firstName]);
-
     $user = $req->execute([$emailInscription, $hashPassword, $address, $zip, $city, $lastName, $firstName]);
 
             $reponse = true;
