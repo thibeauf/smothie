@@ -201,11 +201,6 @@ body {
 .pseudoAvatar{
 	position: relative; top: 100px;
 }
-#fond
-{
-	background-color: #f4f4f2;
-	padding:0 !important;
-}
 
 #demi-main
 {
@@ -218,6 +213,7 @@ h2, h3 {
 	font-weight: normal;
 	color: #f62459;
 }
+
 h1{
 	font-family: 'Amatic SC', cursive;
 	text-transform: uppercase;
@@ -230,11 +226,6 @@ main #article1
 	margin-top: 2.5em;
 }
 
-#fond
-{
-	background-color: #f4f4f2;
-	padding:0 !important;
-}
 
 #demi-main
 {
@@ -298,7 +289,7 @@ row{
 .panelUser div{
 	margin: 0 60px;
 }
-.rounded-circle{
+#favorites .rounded-circle{
 	margin: 20px;
 }
 .smooth {
@@ -402,7 +393,11 @@ nav a i
 	background-color:#fbc6c0;
 }
 
-
+#fond
+{
+	background-color: #f4f4f2;
+	padding:0 !important;
+}
  a:hover
  {
 	 text-decoration: none;
@@ -634,7 +629,7 @@ animation: beat .25s infinite alternate;
 
 ul
 {
-	padding:0!important;
+	padding:0;
 }
 
 .img-thumbnail {
@@ -658,4 +653,66 @@ ul
 	margin: 5% 0;
 	padding:1%;
 	border : 1px solid  #ff729a;
+}
+
+
+/*
+=================================================================
+========================recipe===============================
+*/
+
+#allRecipes
+{
+	margin-bottom: 5%;
+display: flex;
+flex-wrap: wrap;
+}
+
+#allRecipes img
+{
+	width: 160px;
+	height: 160px;
+}
+
+#allRecipes li
+{
+	text-align:center;
+	width: 160px;
+	margin:2%;
+}
+
+#recette
+{
+	background-color: white;
+	margin:5% 0;
+	border: 12px solid #FFDEA2;
+	padding: 5%;
+}
+
+#allRecipes li a
+{
+		color: #ffa89f;
+}
+#allRecipes li a:hover {
+color: #ff729a;
+}
+
+.editForm
+{
+
+	margin: 5% 0;
+}
+
+.editForm li label
+{line-height: 1.5;
+	font-size: 2.3em;
+font-family: 'Amatic SC', cursive;
+text-transform: uppercase;
+font-weight: normal;
+color: #ff729a;}
+
+.editForm li input {
+	border-radius: 50px;
+	background-color: white;
+	padding:4%;
 }
