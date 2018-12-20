@@ -6,7 +6,7 @@ include "crypt.php";
 
 $email=$_POST["email"];
 $mdp=$_POST["mdp"];
-$hashPassword = hashPassword($mdp);
+//$hashPassword = hashPassword($mdp);
 
 
 //if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
@@ -17,10 +17,13 @@ $hashPassword = hashPassword($mdp);
         WHERE email=:email 
         AND password=:password
     ");
-    $req->execute(["email"=>$email,"password"=>$hashPassword]);
+    $req->execute(["email"=>$email,"password"=>$mdp]);
+    //$req->execute(["email"=>$email,"password"=>$hashPassword]);
     $user=$req->fetch();
 
-    if($user['email'] == $email && verifyPassword($hashPassword, $user['password'])==true){
+    if($user['email'] == $email && $user['password'] == $mdp){
+
+    //if($user['email'] == $email && verifyPassword($hashPassword, $user['password'])==true){
         $result=true;
         // $_SESSION['user'] =
         // [
@@ -31,6 +34,8 @@ $hashPassword = hashPassword($mdp);
         // ];
 
         session_start();
+
+        
     }
     else{
         $result = false;

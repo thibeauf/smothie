@@ -27,10 +27,10 @@ function showProducts(){
         processData: false,
         success: function(data){
             for (var i=0; i<data.length; i++){
-                var nom="<h3>"+data[i].recipeName+"<h3>";
-                var image="<img src='"+data[i].photo+"'>";
+                var nom="<h3>"+data[i].recipeName+"</h3>";
+                var image="<img class='d-block w-100' src='"+data[i].photo+"'>";
                 var description="<p>"+data[i].recipeSummary+"</p>";
-                $("#products").append("<li>"+nom+description+image+"</li>");
+                $(".carousel-inner").append("<div class='carousel-item'>"+image+"<div class='carousel-caption d-none d-md-block' style='background-color: rgba(0, 0, 0, 0.3);'>"+nom+description+"</div></div>");
             }  
         }
     });
