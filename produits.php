@@ -13,3 +13,4 @@ $req->execute();
 $produits=$req->fetchAll();
 
 echo json_encode($produits);
+
