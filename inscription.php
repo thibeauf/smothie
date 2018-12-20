@@ -1,7 +1,7 @@
 <?php
 
 include "bdd.php";
-// include "crypt.php";
+include "crypt.php";
 
 	$emailInscription = $_POST["email"];
     $mdpInscription = $_POST["mdp"];
@@ -10,6 +10,7 @@ include "bdd.php";
     $city = $_POST["city"];
     $lastName = $_POST["lastName"];
     $firstName = $_POST["firstName"];
+    $hashPassword = hashPassword($mdpInscription);
 
     $reponse=false;
 
@@ -27,11 +28,10 @@ if(!empty($_POST)){
         VALUES (?,?,?,?,?,?,?)
     ");
 
-//     $hashPassword = hashPassword($mdpInsciption);
 
 //     $user = $req->execute([$emailInscription, $hashPassword, $address, $zip, $city, $lastName, $firstName]);
 
-    $user = $req->execute([$emailInscription, $mdpInscription, $address, $zip, $city, $lastName, $firstName]);
+    $user = $req->execute([$emailInscription, $hashPassword, $address, $zip, $city, $lastName, $firstName]);
 
             $reponse = true;
 
