@@ -16,7 +16,7 @@ if(array_key_exists('email', $_POST) && array_key_exists('mdp', $_POST)){
     $user=$req->fetch();
 
     if(verifyPassword($mdp, $user['password'])==true){
-       $result=true;
+        $result=true;
     }
     else{
         $result = false;

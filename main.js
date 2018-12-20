@@ -1,11 +1,10 @@
 "use strict"
-function showRecipe(){
+function showRecipe(idRecette){
     $.ajax({
         url:'recette.php',
-        method:'post',
+        method:'get',
         dataType:'json',
-        contentType: false,
-        processData: false,
+        data: {idRecette : idRecette},
         success: function(data){
             $("#recipeName").append(data.recipeName);
             $("#recipeSummary").append(data.recipeSummary);
@@ -44,10 +43,9 @@ function showAllRecipes(){
         processData: false,
         success: function(data){
             for (var i=0; i<data.length; i++){
-                var nom="<h3>"+data[i].recipeName+"<h3>";
-                var image="<img src='"+data[i].photo+"'>";
-                var description="<p>"+data[i].recipeSummary+"</p>";
-                $("#allRecipes").append("<li>"+nom+description+image+"</li>");
+                var nom="<figcaption>"+data[i].recipeName+"</figcaption>";
+                var image="<img src='"+data[i].photo+"' class='rounded-circle'>";
+                $("#allRecipes").append("<li><figure>"+image+nom+"<a href='recette.html?idRecette="+data[i].idRecipe+"'>Celle ci !</a></figure></li>");
             }  
         }
     });
@@ -161,9 +159,13 @@ function showProductsIndex(){
 
 $(document).ready(function(){
     if(window.location.href.indexOf("recette.html")){
-        showRecipe();
+
+        var idRecette = location.search.substring(location.search.indexOf("=")+1);
+
+        showRecipe(idRecette);
     }
     if(window.location.href.indexOf("produits.html")){
+        
         showProducts();
     }
     if(window.location.href.indexOf("recettes.html")){

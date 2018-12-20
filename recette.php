@@ -1,8 +1,8 @@
 <?php
 include "bdd.php";
 
-//$id = $_GET['idRecette'];
-$id=1;
+
+$id = $_GET['idRecette'];
 
 $req=$bdd->prepare("
     SELECT
