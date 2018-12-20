@@ -717,8 +717,6 @@ color: #ff729a;}
 	padding:4%;
 }
 
-
-.pageRecette
-{
-	width: 60%;
-}
+.pageRecette {
+margin: 5% 20%;
+    }
