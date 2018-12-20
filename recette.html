@@ -10,6 +10,7 @@
 		<!--
 		<link rel="stylesheet" href="css/normalize.css">
 		 -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<!-- bootstrap -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
 		<link rel="stylesheet" href="style.css">
@@ -39,41 +40,31 @@
 			<main  class="pageRecette">
 
 				<article class="smoothieRecette">
-				<h2>Miom miom miom</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta necessitatibus officiis excepturi amet ea quisquam maiores.
-				</p>
+				<h2 id="recipeName"></h2>
+
 				<div id="col-5 img-responsive">
-					<img class="img-thumbnail" src="images/smoothie1.jpg"/>
+					<img id="imageRecipe" class="img-thumbnail" src=""/>
 				</div>
 
+				<p id="recipeSummary">
 
-								<p>
-									Pour 90 personnes :
-								</p>
+				</p>
+
+
 				<h3>Ingredients</h3>
 
-				<ul>
-					<li>200 Poire</li>
-					<li>50 citrons</li>
-					<li>800 framboises</li>
-					<li>45 bananes </li>
-					<li>1L d'huile</li>
+				<ul  id="ingredientsRecipe">
+	
 				</ul>
 
 			</article>
 
 			<article class="description">
-				<p>
-					 Sed massa nibh, condimentum imperdiet elit a. Proin auctor efficitur et le travail d'equipe c'est vraiment du lorem ipsum, sem quis pharetra. Sed massa nibh, condimentum imperdiet elit a.
-				</p>
 					<h3>Etapes de préparation</h3>
 				<ul>
-					<li>Nettoyer les fruits</li>
-					<li>Éplucher les fruits</li>
-					<li>Couper les fruits</li>
-					<li>Versez les ingrédients dans un grand récipient</li>
-					<li>Servir 17 jours 3h et 26min après préparation</li>
+					<li id="descriptionRecipe"></li>
+					<li id="timeRecipe"></li>
+					<li id="difficultyRecipe"></li>
 				</ul>
 <div class="fav">
 	<h4>Add to favorite</h4>
@@ -103,7 +94,6 @@
 				</p>
 			</small>
 		</footer>
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>
