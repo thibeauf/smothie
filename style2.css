@@ -18,3 +18,17 @@
 .carousel-indicators {
     bottom: -1px;
 }
+.carousel-caption:hover{
+    color: #F8A4BA;
+}
+.carousel-caption:hover h3{
+    color: #F8A4BA;
+}
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+#form-contact{
+    width: 80%;
+    margin: 0 auto;
+}

@@ -62,15 +62,18 @@ function connexion(e){
             data: {email: email, mdp: mdp},
             success: function(data){
                 if(data.result == true){
+                    $(".alert-danger").remove();
+                    $(".formulaireDinscription").remove();
+                    $('#h1Inscription').remove();
                     $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Connexion réussie !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edit_profil.html">Mon profil</a></div></div>');
                 } else {
-                    $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>');
+                    $('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>').insertAfter('#h1Connection');
                 }
             }
         });
     }
     else{
-        $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Format incorrect</div>');
+        $('<div class="alert alert-danger" role="alert">Format incorrect</div>').insertAfter('#h1Connection');
     }
 }
 function logOut(){
@@ -125,7 +128,7 @@ function inscription(e){
                     $('#h1Connection').html('<div><div>');
                     $('#h1Inscription').html('<div><div>');
                     $('.formulaireDeConnexion').html('<div><div>');
-                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
+                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group btn-group-lg" role="group" ><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
             }
         }
     })

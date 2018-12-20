@@ -11,6 +11,7 @@
     <!-- bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -40,12 +41,14 @@
 	<main>
     <section id="contact">
 			<h2>Contactez-moi</h2>
-			<form class="formulaire" method="POST">
-				<input type="text" name="name" placeholder="Votre prénom">
-				<input type="text" name="mail" placeholder="Votre mail">
-				<textarea name="message" rows="1" placeholder="Votre message"></textarea>
-            <button type="submit" name="button">Envoyer</button>
-            <button type="reset" name="button">Effacer</button>
+			<form id="form-contact" class="form-group" method="POST">
+                <input type="text" class="form-control" name="name" placeholder="Votre prénom">
+                <br>
+                <input type="text" class="form-control" name="mail" placeholder="Votre mail">
+                <br>
+				<textarea name="message" class="form-control" rows="3" placeholder="Votre message"></textarea>
+            <button type="submit" id="userConnexion" name="button">Envoyer</button>
+            <button type="reset" id="userConnexion" name="button">Effacer</button>
         </form>
 	</section>
 
