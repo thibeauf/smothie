@@ -201,11 +201,6 @@ body {
 .pseudoAvatar{
 	position: relative; top: 100px;
 }
-#fond
-{
-	background-color: #f4f4f2;
-	padding:0 !important;
-}
 
 #demi-main
 {
@@ -230,11 +225,6 @@ main #article1
 	margin-top: 2.5em;
 }
 
-#fond
-{
-	background-color: #f4f4f2;
-	padding:0 !important;
-}
 
 #demi-main
 {
@@ -298,7 +288,7 @@ row{
 .panelUser div{
 	margin: 0 60px;
 }
-.rounded-circle{
+#favorites .rounded-circle{
 	margin: 20px;
 }
 .smooth {
@@ -402,7 +392,11 @@ nav a i
 	background-color:#fbc6c0;
 }
 
-
+#fond
+{
+	background-color: #f4f4f2;
+	padding:0 !important;
+}
  a:hover
  {
 	 text-decoration: none;
@@ -634,7 +628,7 @@ animation: beat .25s infinite alternate;
 
 ul
 {
-	padding:0!important;
+	padding:0;
 }
 
 .img-thumbnail {
@@ -659,3 +653,40 @@ ul
 	padding:1%;
 	border : 1px solid  #ff729a;
 }
+
+
+/*
+=================================================================
+========================recipe===============================
+*/
+
+#allRecipes
+{
+display: flex;
+flex-wrap: wrap;
+}
+
+#allRecipes img
+{
+	width: 160px;
+	height: 160px;
+}
+
+#allRecipes li
+{
+	text-align:center;
+	width: 160px;
+	margin:2%;
+}
+
+#recette
+{
+	margin:5% 0;
+}
+
+#allRecipes li a
+{
+		color: #ffa89f;
+}
+#allRecipes li a:hover {
+color: #ff729a;}
