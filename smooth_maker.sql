@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 19 Décembre 2018 à 16:54
+-- Généré le :  Jeu 20 Décembre 2018 à 15:57
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.32-0ubuntu0.16.04.1
 
@@ -27,10 +27,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `favorite` (
-  `id` int(5) NOT NULL,
-  `idUser` int(5) NOT NULL,
-  `idRecipe` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL,
+  `idRecipe` int(10) NOT NULL,
+  `idUser` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `favorite`
+--
+
+INSERT INTO `favorite` (`id`, `idRecipe`, `idUser`) VALUES
+(1, 1, 19),
+(2, 3, 19);
 
 -- --------------------------------------------------------
 
@@ -75,10 +83,10 @@ INSERT INTO `recipe` (`idRecipe`, `recipeName`, `recipeSummary`, `recipeDescript
 (3, 'Légumes d\'été', 'Smoothie de légumes glacés', '2 tomates coeur de boeuf préalablement pelées\r\n\r\n2 carottes\r\n\r\n1 branche de céleri\r\n\r\nCitron jaune\r\n\r\nCitron vert\r\n\r\nSel de céleri (selon le goût)\r\n\r\n1 cuillère à café de sauce worcestershire\r\n\r\n10 glaçons', 'Quis enim aut eum diligat quem metuat, aut eum a quo se metui putet? Coluntur tamen simulatione dumtaxat ad tempus. Quod si forte, ut fit plerumque, ceciderunt, tum intellegitur quam fuerint inopes amicorum. Quod Tarquinium dixisse ferunt, tum exsulantem se intellexisse quos fidos amicos habuisset, quos infidos, cum iam neutris gratiam referre posset.', '10 minutes', 'Très facile', 'images/smoothie3.jpg', 'Hiver'),
 (4, 'Casanova', 'Cocktail de fruits au citron vert', '10 cl de lait de coco\r\n\r\n20 cl de jus de fruit multivitaminé\r\n\r\n1 cuillère à café de jus de citron vert\r\n\r\nGlaçons\r\n\r\n1 rondelle de citron vert (pour la déco)', 'Quis enim aut eum diligat quem metuat, aut eum a quo se metui putet? Coluntur tamen simulatione dumtaxat ad tempus. Quod si forte, ut fit plerumque, ceciderunt, tum intellegitur quam fuerint inopes amicorum. Quod Tarquinium dixisse ferunt, tum exsulantem se intellexisse quos fidos amicos habuisset, quos infidos, cum iam neutris gratiam referre posset.', '5 minutes', 'Très facile', 'images/smoothie4.jpg', 'Ete'),
 (5, 'Bonne mine', 'Smoothie au lait de coco et poudre de baobab', '200 g de fraises + 2 bananes + 2 pommes + des fruits secs - amandes /noisettes + des lamelles de gingembre mariné* + des raisins secs + 2 càs de Baies de Goji\r\n4 feuilles de menthe fraîche\r\n1 càs de  poudre de Baobab bio Baomix\r\npour le sucre j\'ai rajouté du sirop de gingembre bio\r\n20 cl de lait de coco bio', 'Quis enim aut eum diligat quem metuat, aut eum a quo se metui putet? Coluntur tamen simulatione dumtaxat ad tempus. Quod si forte, ut fit plerumque, ceciderunt, tum intellegitur quam fuerint inopes amicorum. Quod Tarquinium dixisse ferunt, tum exsulantem se intellexisse quos fidos amicos habuisset, quos infidos, cum iam neutris gratiam referre posset.', '3 minutes', 'Très facile', 'images/smoothie5.jpg', 'Hiver'),
-(11, 'Ananas Mangue', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', '', '', '', '', 'images/smoothie.jpg', 'Ete'),
 (12, 'Ananas Mangue Pomme', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, NULL, '', '', 'images2/048120.jpg', 'Hiver'),
 (13, 'Bowl Fraises Banane', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, NULL, '', '', 'images/smoothie6.jpg', 'Hiver'),
-(14, 'Banane Miel', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, NULL, '', '', 'images2/shutterstock_170853497.jpg', 'Ete');
+(14, 'Banane Miel', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, NULL, '', '', 'images2/shutterstock_170853497.jpg', 'Ete'),
+(15, 'Ananas Mangue', 'Lorem ipsum dolor sit amet, consectetur adipiscing...', NULL, NULL, '', '', '/images/smoothie1.jpg', 'Ete');
 
 -- --------------------------------------------------------
 
@@ -119,7 +127,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `lastname`, `firstname`, `address`, `zip`, `city`, `email`, `password`, `photo`, `date_inscription`) VALUES
 (1, 'Maran', 'Tro', '26 rue Emile Decorps', '69000', 'Villeurbanne', 'trotro@poney.com', 'cheval23', '', '2018-12-17 00:00:00'),
 (2, 'jo', 'jo', 'rue des dépravés', '69001', 'Lyon', 'test@3wa.fr', '123456', NULL, '2018-12-18 16:31:55'),
-(15, 'fontaine', 'tibo', 'rue des dépravés', '69001', 'Lyon', 'thibaud.fontaine1@gmail.com', '$2y$11$e307ff351f9a2796851ceOkQwv27lMT2ejZGXRwhsWAbRs2WqD0CK', NULL, '2018-12-19 12:14:18');
+(15, 'fontaine', 'tibo', 'rue des dépravés', '69001', 'Lyon', 'thibaud.fontaine1@gmail.com', '$2y$11$e307ff351f9a2796851ceOkQwv27lMT2ejZGXRwhsWAbRs2WqD0CK', NULL, '2018-12-19 12:14:18'),
+(16, 'Chris', 'Pine', '54 rue des  ET', '69000', 'Autre dimension', 'star@trek.com', '$2y$11$71537f9f4673c9f12445au9rRa6rBXtP1XXP.1eaiPBEInS/0ZqU6', NULL, '2018-12-20 10:57:45'),
+(19, 'Hiddleston', 'Tom', '56 rue d\'Asgaard', '69000', 'Asgaard', 'loki@marvel.com', '$2y$11$56799b0482acc547e9106OwBzAZAyGiWIpYKLDIySUJrJplVdmwHO', NULL, '2018-12-20 11:44:54');
 
 --
 -- Index pour les tables exportées
@@ -129,9 +139,7 @@ INSERT INTO `user` (`id`, `lastname`, `firstname`, `address`, `zip`, `city`, `em
 -- Index pour la table `favorite`
 --
 ALTER TABLE `favorite`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `idUser` (`idUser`),
-  ADD UNIQUE KEY `idRecipe` (`idRecipe`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `product`
@@ -169,27 +177,20 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `favorite`
 --
 ALTER TABLE `favorite`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `recipe`
 --
 ALTER TABLE `recipe`
-  MODIFY `idRecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idRecipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Contraintes pour les tables exportées
 --
-
---
--- Contraintes pour la table `favorite`
---
-ALTER TABLE `favorite`
-  ADD CONSTRAINT `FK_user` FOREIGN KEY (`idUser`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `favorite_ibfk_1` FOREIGN KEY (`idRecipe`) REFERENCES `recipe` (`idRecipe`);
 
 --
 -- Contraintes pour la table `recipe_details`

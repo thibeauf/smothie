@@ -1,6 +1,7 @@
 <?php
 include "bdd.php";
 include "UserSession.class.php";
+
 $userSession = new UserSession();
 $id = $userSession->getUserId();
 $infoUser = $bdd->prepare("
