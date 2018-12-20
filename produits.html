@@ -27,21 +27,7 @@
 				<a class="expand" href="contact.html">Contact</a>
 				<a class="expand"  href="login.html"><i class="far fa-user-circle"></i></a>
 			</nav>
-			<!-- <?php include "UserSession.class.php"; ?>
-			<?php $userSession = new UserSession();?>
-			<?php if($userSession->isAuthenticated()): ?> -->
-				<ul>
-					<li>
-						<a href="user.html">Mon profil</a>
-					</li>
-					<li>
-						<p class="welcome">Bonjour <strong><?= $userSession->getFullName()?></strong> !</p>
-						<a class="deconnexion" href="#">Déconnexion<?php $userSession->destroy()?></a>
-					</li>
-				</ul>
-			<?php else: ?>
 				<img id="logo" src="images/logo-degrade.png"/>
-			<?php endif;?>
 		</header>
 		<!--MAIN CONTENT-->
 
