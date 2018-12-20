@@ -62,9 +62,9 @@ function connexion(e){
             data: {email: email, mdp: mdp},
             success: function(data){
                 if(data.result == true){
-                    $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Connexion réussie !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="edit_profil.html">Mon profil</a></div></div>');
+                    $(".formulaireDeConnexion").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Connexion réussie !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
                 } else {
-                    $(".formulaireDeConnexion").html('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>');
+                    $('<div class="alert alert-danger" role="alert">Identifiants incorrects</div>').insertBefore($("#h1Connection"));
                 }
             }
         });
@@ -128,28 +128,40 @@ function inscription(e){
                     $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
             }
         }
-    })
+    });
 }
-function showProductsIndex(){
-    $.ajax({
-        url: 'produitsIndex.php',
-        method: 'post',
-        dataType: 'json',
-        data: {
-            },
-        success: function(data){
-            if (data.reponse == true) {
-                    $('#h1Connection').html('<div><div>');
-                    $('#h1Inscription').html('<div><div>');
-                    $('.formulaireDeConnexion').html('<div><div>');
-                    $(".formulaireDinscription").html('<div class="alert alert-success" role="alert"><h2 class="alert-heading">Bienvenue à toi !</h2><div class="btn-group-toggle" data-toggle="buttons"><a class="btn btn-info" href="index.html">Accueil</a><a class="btn btn-info" href="user.html">Mon profil</a></div></div>');
-            }
-        }
-    })
-}
+
 function sendMessage(){
    $("#contact").html('<div class="alert alert-success" role="alert"><br><br><h3 class="alert-heading">Message envoyé !</h3><br></div>');
-};
+}
+
+function favoriteRecipes(){
+    $.ajax({
+        url: 'favorite.php',
+        method: 'post',
+        dataType: 'json',
+        success: function(data){
+            for (var i=0; i<data.length; i++){
+                var nom="<figcaption>"+data[i].recipeName+"</figcaption>";
+                var image="<img src='"+data[i].photo+"' class='rounded-circle'>";
+                $("#favoriteRecipes").append("<li><figure>"+image+nom+"<a href='recette.html?idRecette="+data[i].idRecipe+"'>Celle ci !</a></figure></li>");
+            }
+
+        }
+    });
+}
+
+function addFavorite(){
+    $.ajax({
+        url: 'addfavorite.php',
+        method: 'get',
+        dataType: 'json',
+        data: {idRecette: idRecette},
+        success: function(data){
+            console.log("oook?");
+        }
+    });
+}
 
 $(document).ready(function(){
     if(window.location.href.indexOf("recette.html") > 0){
@@ -171,10 +183,8 @@ $(document).ready(function(){
     $(".formulaireDinscription").on("submit", inscription)
     if(window.location.href.indexOf("user.html") > 0){
         showInfo();
-    }
-    if(window.location.href.indexOf("user.html") > 0){
-        showProductsIndex();
+        favoriteRecipes();
     }
     $(".formulaire").on("submit", sendMessage);
+    $("#coeur").on("click", addFavorite);
 });
-
