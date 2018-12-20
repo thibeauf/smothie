@@ -29,7 +29,7 @@ function showProducts(){
                 var nom="<h3>"+data[i].recipeName+"</h3>";
                 var image="<img class='d-block w-100' src='"+data[i].photo+"'>";
                 var description="<p>"+data[i].recipeSummary+"</p>";
-                $(".carousel-inner").append("<div class='carousel-item'>"+image+"<div class='carousel-caption d-none d-md-block' style='background-color: rgba(0, 0, 0, 0.3);'>"+nom+description+"</div></div>");
+                $(".carousel-inner").append("<div class='carousel-item'>"+image+"<a href=recette.html?idRecette="+data[i].idRecipe+"><div class='carousel-caption d-none d-md-block' style='background-color: rgba(0, 0, 0, 0.3);'>"+nom+description+"</div></a></div>");
             }  
         }
     });
